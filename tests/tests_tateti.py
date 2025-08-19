@@ -10,9 +10,12 @@ class TestTateti(unittest.TestCase):
     def test_turno_inicial(self):
         self.assertEqual(self.juego.turno, "X")
     
+
     def test_cambio_de_turno(self):
         self.assertEqual(self.juego.turno, "X")
         self.juego.ocupar_una_de_las_casillas(0, 0)
+        self.assertEqual(self.juego.turno, "X")
+        self.juego.cambiar_turno()
         self.assertEqual(self.juego.turno, "0")
     
     def test_ocupar_casilla(self):

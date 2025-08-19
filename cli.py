@@ -29,10 +29,10 @@ def main():
             if juego.tablero.tablero_lleno():
                 print("El tablero está lleno, es un empate!")
                 break
+            juego.cambiar_turno()
+
         except Exception as e:
             print(e)
-
-
 
         
 
